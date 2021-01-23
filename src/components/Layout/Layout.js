@@ -1,5 +1,5 @@
 import { Brightness6Rounded, SportsEsports } from '@material-ui/icons';
-import Head from 'next/Head';
+import Head from 'next/head';
 import { useEffect, useState } from 'react';
 import styles from './Layout.module.css';
 

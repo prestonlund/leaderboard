@@ -39,7 +39,6 @@ const PlayersTable = ({ players }) => {
     const [value, setValue] = useState(); 
 
     const orderedPlayers = orderBy(players, value, direction);
-    console.log('players', players)
 
     const switchDirection = () => {
         if (!direction) {
