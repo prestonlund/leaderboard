@@ -35,8 +35,8 @@ const SortArrow = ({ direction }) => {
 }
 
 const PlayersTable = ({ players }) => {
-    const [direction, setDirection] = useState('desc');
-    const [value, setValue] = useState('games_won');
+    const [direction, setDirection] = useState();
+    const [value, setValue] = useState(); 
 
     const orderedPlayers = orderBy(players, value, direction);
     console.log('players', players)
