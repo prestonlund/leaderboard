@@ -1,0 +1,201 @@
+.heading {
+    display: flex;
+    padding: 20px;
+}
+
+.heading button {
+    border: none;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+}
+
+.heading_profile_pic {
+    flex: 1;
+    margin-right: 26px;
+}
+
+.heading_username, .heading_games_won, .heading_games_lost, .heading_score, .heading_seconds_played {
+    flex: 5;
+    color: var(--text-color-secondary);
+    font-weight: 500;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heading_username {
+    justify-content: flex-start;
+}
+
+
+.heading_arrow {
+    color: var(--primary-color);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-left: 2px;
+}
+
+.row {
+    display: flex;
+    padding: 20px;
+
+    text-align: center;
+
+    background-color: var(--background-color-light);
+    border-radius: 8px;
+    margin-bottom: 16px;
+
+    box-shadow: var(--box-shadow);
+    font-weight: 500;
+
+    transition: transform 200ms ease-in-out, box-shadow 200ms ease-in-out;
+}
+
+.row:hover {
+    transform: translateX(-4px);
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);;
+}
+
+.rank {
+    font-size: 1.5rem;
+    padding-right: 10px;
+}
+
+.username {
+    flex: 5;
+    text-align: left;
+}
+
+.games_won {
+    flex: 5;
+}
+
+.games_lost {
+    flex: 5;
+}
+.score {
+    flex: 5;
+}
+.seconds_played {
+    flex: 5;
+}
+
+.profile_pic {
+    flex: 1;
+    margin-right: 16px;
+}
+
+.profile_pic img {
+    width: 60%;
+}
+
+@media screen and (max-width: 920px) {
+    .heading_username, .heading_games_won, .heading_games_lost, .heading_score, .heading_seconds_played {
+        flex: 5;
+        color: var(--text-color-secondary);
+        font-weight: 700;
+        font-size: 0.75rem;
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .heading_username {
+        justify-content: flex-start;
+    }
+
+    .rank {
+        font-size: 1.2rem;
+        padding-right: 10px;
+    }
+    .username {
+        flex: 8;
+        text-align: left;
+        font-size: 0.75rem;
+        font-weight: 700;
+    }
+    
+    .games_won {
+        flex: 8;
+        font-size: 0.75rem;
+        font-weight: 700;
+    }
+    
+    .games_lost {
+        flex: 8;
+        font-size: 0.75rem;
+        font-weight: 700;
+    }
+    .score {
+        flex: 8;
+        font-size: 0.75rem;
+        font-weight: 700;
+    }
+    .seconds_played {
+        flex: 8;
+        font-size: 0.75rem;
+        font-weight: 700;
+    }
+    
+    .profile_pic {
+        flex: 1;
+        margin-right: 16px;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .heading_username, .heading_games_won, .heading_games_lost, .heading_score, .heading_seconds_played {
+        flex: 5;
+        color: var(--text-color-secondary);
+        font-weight: 700;
+        font-size: 0.50rem;
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .heading_username {
+        justify-content: flex-start;
+    }
+
+    .rank {
+        font-size: 1rem;
+        padding-right: 10px;
+    }
+
+    .username {
+        flex: 5;
+        text-align: left;
+        font-size: 0.50rem;
+    }
+    
+    .games_won {
+        flex: 5;
+        font-size: 0.50rem;
+    }
+    
+    .games_lost {
+        flex: 5;
+        font-size: 0.50rem;
+    }
+    .score {
+        flex: 5;
+        font-size: 0.50rem;
+    }
+    .seconds_played {
+        flex: 5;
+        font-size: 0.50rem;
+    }
+    
+    .profile_pic {
+        flex: 1;
+        margin-right: 16px;
+    }
+}
