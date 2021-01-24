@@ -8,6 +8,7 @@ export default function Home({ players }) {
 
   const [keyword, setKeyword] = useState("");
 
+  // display only players that match the input
   const filteredPlayers = players.filter((player) =>
     player.username.toLowerCase().includes(keyword)
   );
@@ -35,8 +36,10 @@ export const getStaticProps = async () => {
   const res = await fetch("https://us-central1-airin-rec-sandbox.cloudfunctions.net/leaderboard/");
   const result = await res.json();
 
+  // convert json to array ordered in descending order by games won
   const rankOrder = [...result].sort((a, b) => (a.games_won > b.games_won ? -1 : 1));
 
+  // add key of rank and values matching their index + 1 since it's ordered by games won
   const players = rankOrder.map(function(el) {
     const o = Object.assign({}, el);
     o.rank = (rankOrder.indexOf(el) + 1);

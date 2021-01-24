@@ -14,6 +14,7 @@ const orderBy = (players, value, direction) => {
     return players;
 };
 
+// determine arrow direction
 const SortArrow = ({ direction }) => {
     if (!direction) {
         return <></>
@@ -55,6 +56,7 @@ const PlayersTable = ({ players }) => {
         setValue(value);
     }
 
+    // format score numbers to have commas
     function formatNumber(num) {
         return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
     };
@@ -107,6 +109,7 @@ const PlayersTable = ({ players }) => {
 
                         <div className={styles.score}>{formatNumber(player.score)}</div>
 
+                        {/* format seconds played to hh:mm:ss */}
                         <div className={styles.seconds_played}>{new Date((player.seconds_played) * 1000).toISOString().substr(11, 8)}</div>
                     </div>
                 </div>
