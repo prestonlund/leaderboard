@@ -12,10 +12,14 @@
 
 .heading_profile_pic {
     flex: 1;
-    margin-right: 26px;
+    margin-right: 36px;
 }
 
-.heading_username, .heading_games_won, .heading_games_lost, .heading_score, .heading_seconds_played {
+.heading_username, 
+.heading_games_won, 
+.heading_games_lost, 
+.heading_score, 
+.heading_seconds_played {
     flex: 5;
     color: var(--text-color-secondary);
     font-weight: 500;
@@ -63,6 +67,7 @@
 
 .rank {
     font-size: 1.5rem;
+    width: 30px;
     padding-right: 10px;
 }
 
@@ -91,10 +96,35 @@
 }
 
 .profile_pic img {
-    width: 60%;
+    width: 30px;
 }
 
-@media screen and (max-width: 920px) {
+@media screen and (max-width: 950px) {
+    .seconds_played,
+    .heading_seconds_played {
+        display: none;
+    }
+    .score,
+    .heading_score {
+        display: none;
+    }
+}
+@media screen and (max-width: 640px) {
+    .seconds_played,
+    .heading_seconds_played {
+        display: none;
+    }
+    .score,
+    .heading_score {
+        display: none;
+    }
+    .games_lost,
+    .heading_games_lost {
+        display: none;
+    }
+}
+
+/* @media screen and (max-width: 920px) {
     .heading_username, .heading_games_won, .heading_games_lost, .heading_score, .heading_seconds_played {
         flex: 5;
         color: var(--text-color-secondary);
@@ -198,4 +228,4 @@
         flex: 1;
         margin-right: 16px;
     }
-}
+} */
